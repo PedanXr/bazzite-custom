@@ -14,7 +14,6 @@ dnf5 install -y tmux
 
 dnf5 -y copr enable solopasha/hyprland
 dnf5 -y copr enable erikreider/SwayNotificationCenter
-dnf5 -y copr enable pgdev/ghostty
 dnf5 -y copr enable wezfurlong/wezterm-nightly
 
 # Use COPR Example:
@@ -53,7 +52,7 @@ dnf5 install -y --setopt=install_weak_deps=False \
     SwayNotificationCenter \
     NetworkManager-tui \
     tmux \
-    ghostty \
+    kitty \
     wezterm \
     blueman \
     qt5-qtwayland \
