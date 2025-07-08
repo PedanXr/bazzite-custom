@@ -18,6 +18,7 @@ dnf5 -y copr enable wezfurlong/wezterm-nightly
 
 # Use COPR Example:
 dnf5 -y copr enable ublue-os/staging
+dnf5 copr enable ublue/os-akmods
 
 dnf5 install -y --setopt=install_weak_deps=False \
     xdg-desktop-portal-hyprland \
@@ -63,7 +64,6 @@ dnf5 install -y --setopt=install_weak_deps=False \
 dnf5 -y copr disable ublue-os/staging
 dnf5 -y copr disable solopasha/hyprland
 dnf5 -y copr disable erikreider/SwayNotificationCenter
-dnf5 -y copr disable pgdev/ghostty
 dnf5 -y copr disable wezfurlong/wezterm-nightly
 
 #### Example for enabling a System Unit File
