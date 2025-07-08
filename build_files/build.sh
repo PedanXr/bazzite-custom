@@ -12,10 +12,10 @@ set -ouex pipefail
 # this installs a package from fedora repos
 dnf5 install -y tmux 
 
-enable_copr solopasha/hyprland
-enable_copr erikreider/SwayNotificationCenter
-enable_copr pgdev/ghostty
-enable_copr wezfurlong/wezterm-nightly
+dnf5 -y copr enable solopasha/hyprland
+dnf5 -y copr enable erikreider/SwayNotificationCenter
+dnf5 -y copr enable pgdev/ghostty
+dnf5 -y copr enable wezfurlong/wezterm-nightly
 
 # Use COPR Example:
 dnf5 -y copr enable ublue-os/staging
@@ -62,7 +62,13 @@ dnf5 install -y --setopt=install_weak_deps=False \
 
 # Disable COPRs so they don't end up enabled on the final image:
 dnf5 -y copr disable ublue-os/staging
+dnf5 -y copr disable solopasha/hyprland
+dnf5 -y copr disable erikreider/SwayNotificationCenter
+dnf5 -y copr disable pgdev/ghostty
+dnf5 -y copr disable wezfurlong/wezterm-nightly
 
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
+systemctl disable gdm
+systemctl enable sddm
