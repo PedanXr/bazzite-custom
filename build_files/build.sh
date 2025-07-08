@@ -18,7 +18,7 @@ dnf5 -y copr enable wezfurlong/wezterm-nightly
 
 # Use COPR Example:
 dnf5 -y copr enable ublue-os/staging
-dnf5 copr enable ublue/os-akmods
+dnf5 -y copr enable ublue-os/akmods
 
 dnf5 install -y --setopt=install_weak_deps=False \
     xdg-desktop-portal-hyprland \
